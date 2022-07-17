@@ -41,8 +41,6 @@ void swimmer (double speed, std::string name)
 }
 
 
-
-
 int main()
 {
     double speed;
@@ -51,11 +49,11 @@ int main()
     std::cout << "Enter speed and name swimmer"<< std::endl;
     std::cin >> speed >> name;
     std::thread swimmer1(swimmer,speed,name);
-    std::thread swimmer2(swimmer,40,"Pavel");
-    std::thread swimmer3(swimmer,10,"Ivan");
-    std::thread swimmer4(swimmer,25,"Fedor");
-    std::thread swimmer5(swimmer,30,"Slava");
-    std::thread swimmer6(swimmer,15.5,"Petr");
+    std::thread swimmer2(swimmer,10,"Pavel");
+    std::thread swimmer3(swimmer,20,"Ivan");
+    std::thread swimmer4(swimmer,30,"Fedor");
+    std::thread swimmer5(swimmer,40,"Slava");
+    std::thread swimmer6(swimmer,50,"Petr");
 
     swimmer1.join();
     swimmer2.join();
